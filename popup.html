@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <style>
-    body { width: 220px; padding: 15px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f9f9f9; }
+    body { width: 220px; padding: 15px; font-family: 'Segoe UI', sans-serif; background: #f9f9f9; }
     h3 { margin-top: 0; color: #333; font-size: 16px; border-bottom: 2px solid #4285f4; padding-bottom: 5px; }
     .container { display: flex; flex-direction: column; gap: 10px; }
     select, button { padding: 10px; border-radius: 6px; border: 1px solid #ddd; font-size: 14px; outline: none; transition: 0.2s; }
@@ -15,6 +15,7 @@
     #loadBtn:hover { background-color: #2d9249; }
     label { font-size: 11px; color: #666; font-weight: bold; text-transform: uppercase; }
     #fileInput { display: none; }
+    .info-text { font-size: 10px; color: #888; text-align: center; margin-top: 5px; }
   </style>
 </head>
 <body>
@@ -28,7 +29,8 @@
       <option value="json">Adat (JSON)</option>
     </select>
     <button id="saveBtn">📥 Beszélgetés mentése</button>
-    <button id="loadBtn">📤 Mentés visszatöltése</button>
+    <button id="loadBtn">🔄 Beszélgetés visszatöltése</button>
+    <div class="info-text">Másolás után csatold a fájlt a chatben!</div>
   </div>
   <input type="file" id="fileInput" accept=".md,.txt,.json,.html">
   <script src="popup.js"></script>
