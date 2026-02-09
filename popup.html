@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { width: 220px; padding: 15px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f9f9f9; }
+    h3 { margin-top: 0; color: #333; font-size: 16px; border-bottom: 2px solid #4285f4; padding-bottom: 5px; }
+    .container { display: flex; flex-direction: column; gap: 10px; }
+    select, button { padding: 10px; border-radius: 6px; border: 1px solid #ddd; font-size: 14px; outline: none; transition: 0.2s; }
+    select { background: white; cursor: pointer; }
+    button { cursor: pointer; border: none; font-weight: bold; }
+    #saveBtn { background-color: #4285f4; color: white; }
+    #saveBtn:hover { background-color: #357ae8; }
+    #loadBtn { background-color: #34a853; color: white; }
+    #loadBtn:hover { background-color: #2d9249; }
+    label { font-size: 11px; color: #666; font-weight: bold; text-transform: uppercase; }
+    #fileInput { display: none; }
+  </style>
+</head>
+<body>
+  <h3>AI Thread Vault</h3>
+  <div class="container">
+    <label>Mentési formátum</label>
+    <select id="formatSelect">
+      <option value="md">Markdown (.md)</option>
+      <option value="html">Modern HTML (.html)</option>
+      <option value="txt">Sima szöveg (.txt)</option>
+      <option value="json">Adat (JSON)</option>
+    </select>
+    <button id="saveBtn">📥 Beszélgetés mentése</button>
+    <button id="loadBtn">📤 Mentés visszatöltése</button>
+  </div>
+  <input type="file" id="fileInput" accept=".md,.txt,.json,.html">
+  <script src="popup.js"></script>
+</body>
+</html>
